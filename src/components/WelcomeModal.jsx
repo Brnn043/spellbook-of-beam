@@ -6,7 +6,7 @@ export default function WelcomeModal({ setShowWelcome }) {
     const sentences = [
         "Welcome to my spellbook, or as humans call it, my portfolio.",
         "I am Beam (Raksakul Hiranas), the proud owner of this mansion.",
-        "Currently, I'm studying in the 2nd year of Computer Engineering at Chulalongkorn University.",
+        "Currently, I'm studying in the 3rd year of Computer Engineering at Chulalongkorn University.",
         "As a passionate creative and inspirational witch, I love conjuring up imaginative creations, just like this very spellbook. 😊",
         'If you\'d like to know more about me, feel free to explore the rooms in my mansion, including "Profile", "Projects", and "Activity".',
         'You can navigate through my magical space by "clicking the buttons" on the screen, or by pressing "A" or "D", or using the "left" and "right" arrow keys.'

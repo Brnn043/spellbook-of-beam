@@ -4,16 +4,19 @@ import { InfoModal, ProjectModal } from "../GlobalModal";
 export const KnowMe = ({ setOpen }) => {
     const data = [
         {
-            title: '1/3',
+            title: '👋 Introduction',
             images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
-            description: ['Hello, my name is Raksakul Hiranas but you can call me Beam!',
-                'Born on 2nd July, 2005, I am currently in my 2nd year studying Computer Engineering at Chulalongkorn University.'],
-            tags: [],
+            description: [
+                'Hello! I\'m Raksakul Hiranas, but everyone calls me Beam! 🌟',
+                'Born on July 2nd, 2005 🎂 Currently pursuing my passion in Computer Engineering at Chulalongkorn University as a 3rd-year student.',
+                'I\'m a tech enthusiast who loves bringing creative ideas to life through code! 💻✨'
+            ],
+            tags: ['Student', 'Computer Engineering', 'Tech Enthusiast', 'Born 2005'],
             viewMore: [
                 {
                     title: 'Email',
-                    link: 'bm.raksakul@gmail.com',
-                    linkTitle: 'bm.raksakul@gmail.com'
+                    link: 'mailto:raksakul.hiranas@gmail.com',
+                    linkTitle: 'raksakul.hiranas@gmail.com'
                 },
                 {
                     title: 'Github',
@@ -21,31 +24,41 @@ export const KnowMe = ({ setOpen }) => {
                     linkTitle: 'Brnn043'
                 },
                 {
-                    title: 'Linkedin',
+                    title: 'LinkedIn',
                     link: 'https://linkedin.com/in/raksakul-hiranas',
                     linkTitle: 'Raksakul Hiranas'
                 },
             ]
         },
         {
-            title: '2/3',
+            title: '🚀 Personality & Values',
             images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
-            description: ['I am an enthusiastic, hardworking, and passionate individual with a love for creativity. I enjoy learning new things, accept challenges, and am very dedicated to my work.',
-                'I am driven by my passion for innovation and creativity, always striving to turn challenges into opportunities while seeking continuous growth in both my personal and academic life.'],
-            tags: [],
+            description: [
+                'I\'m an enthusiastic and hardworking individual with an unquenchable thirst for creativity! 🎨',
+                'Learning new things excites me, and I embrace challenges as opportunities to grow and excel. 📈',
+                'Driven by innovation and creativity, I believe in turning obstacles into stepping stones for success. 💡',
+                'My dedication to continuous growth fuels both my personal development and academic excellence. 🌱'
+            ],
+            tags: ['Enthusiastic', 'Creative', 'Hardworking', 'Innovative', 'Growth Mindset'],
             viewMore: null
         },
         {
-            title: '3/3',
+            title: '🎯 Lifestyle & Hobbies',
             images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
-            description: ['When faced with difficulties, I rely on my dedication and commitment to push through and achieve success.',
-                'In my spare time, I like to do coding, drawing, dancing, and some other creative stuff!'],
-            tags: [],
+            description: [
+                'When challenges arise, my determination and commitment help me push through to achieve my goals! 💪',
+                'In my free time, I dive into various creative pursuits that keep me inspired and energized:',
+                '💻 Coding new projects and experimenting with technologies',
+                '🎨 Drawing and visual arts to express my creativity',
+                '💃 Dancing to stay active and have fun',
+                '✨ Exploring other creative outlets that spark my imagination!'
+            ],
+            tags: ['Coding', 'Drawing', 'Dancing', 'Creative Arts', 'Determined'],
             viewMore: [
                 {
                     title: 'Email',
-                    link: 'bm.raksakul@gmail.com',
-                    linkTitle: 'bm.raksakul@gmail.com'
+                    link: 'mailto:raksakul.hiranas@gmail.com',
+                    linkTitle: 'raksakul.hiranas@gmail.com'
                 },
                 {
                     title: 'Github',
@@ -53,7 +66,7 @@ export const KnowMe = ({ setOpen }) => {
                     linkTitle: 'Brnn043'
                 },
                 {
-                    title: 'Linkedin',
+                    title: 'LinkedIn',
                     link: 'https://linkedin.com/in/raksakul-hiranas',
                     linkTitle: 'Raksakul Hiranas'
                 },
@@ -61,90 +74,34 @@ export const KnowMe = ({ setOpen }) => {
         }
     ]
 
-    return <ProjectModal title={'Me'} data={data} setOpen={setOpen} />
+    return <ProjectModal title={'About Me'} data={data} setOpen={setOpen} />
 };
 
 
 export const Education = ({ setOpen }) => {
     const data = [
-        "Sci-Math Program, Saint Joseph Convent School",
-        "Computer Engineering , Chulalongkorn University"
-    ];
-
-    return <InfoModal title={'Education'} setOpen={setOpen} data={data} />
-}
-
-export const Interest = ({ setOpen }) => {
-    const data = [
-        "Web development",
-        "Game development",
-        "Augmented reality / Virtual reality / Metaverse",
-        "Computer graphics",
-        "Artificial Intelligence"
-    ]
-    return <InfoModal title={'Interests'} setOpen={setOpen} data={data} />
-}
-
-
-export const Skills = ({ setOpen }) => {
-    const data = [
         {
-            title: 'Technical skills',
-            content: [
-                {
-                    title: 'Programming Languages',
-                    content: 'C, C++, C#, Python, Java'
-                },
-                {
-                    title: 'Web Technologies',
-                    content: 'HTML, CSS, JavaScript, TypeScript'
-                },
-                {
-                    title: 'Frameworks & Libraries',
-                    content: 'React, Next.js, Three.js, React-Three-Fiber, Astro, Vue.js etc.'
-                },
-                {
-                    title: 'UI Frameworks',
-                    content: 'Tailwind CSS'
-                },
-                {
-                    title: 'Game Development & 3D Tools',
-                    content: 'Unity, Blender etc.'
-                },
-                {
-                    title: 'Version Control',
-                    content: 'Git, GitHub'
-                }
-            ]
+            degree: "Computer Engineering",
+            school: "Chulalongkorn University",
+            gpa: "3.95",
+            graduation: "Expected Graduation: 2027",
+            status: "current"
         },
         {
-            title: 'Language Skills',
-            content: [
-                'Advanced Level (C1) in English, certified by Stafford House UK',
-                'Elementary proficiency, Japanese language',
-                'Native speaker, Thai language'
-            ]
+            degree: "Sci-Math Program",
+            school: "Saint Joseph Convent School",
+            gpa: "4.00",
+            graduation: "Graduated: 2023",
+            status: "completed"
         }
     ];
 
-    const [currentPage, setCurrentPage] = useState(0);
-
-    const handlePrevGame = () => {
-        if (currentPage === 0) setCurrentPage(1);
-        else setCurrentPage(0);
-    };
-
-    const handleNextGame = () => {
-        if (currentPage === 0) setCurrentPage(1);
-        else setCurrentPage(0);
-    };
-
     return (
         <div className="fixed w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-50">
-            <div className="bg-white border-2 border-thisBlack rounded-xl overflow-hidden w-3/4 max-w-xl flex flex-col md:flex-col relative">
+            <div className="bg-white border-2 border-thisBlack rounded-xl overflow-hidden w-3/4 max-w-xl flex flex-col relative">
                 {/* Header */}
                 <div className="bg-gradientcustom text-thisBlack border-b-2 border-thisBlack h-16 text-center flex justify-center items-center font-payToneOne text-2xl relative">
-                    Skills
+                    Education
                     {/* Close Button */}
                     <button
                         onClick={() => setOpen(false)}
@@ -154,47 +111,275 @@ export const Skills = ({ setOpen }) => {
                     </button>
                 </div>
 
-                <div className="p-4">
-                    <div className="flex justify-between items-center mb-4 font-karla text-thisBlack text-xl">
+                {/* Education Content */}
+                <div className="p-6 space-y-6">
+                    {data.map((education, index) => (
+                        <div key={index} className="bg-gradient-to-r from-[#ffeaf8] to-[#f8f4ff] border border-[#e1bee7] rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div className="flex flex-col space-y-3">
+                                {/* Degree/Program */}
+                                <div className="flex items-center space-x-2">
+                                    <span className="text-[#c455e8] text-lg">🎓</span>
+                                    <h3 className="font-karla text-lg font-bold text-thisBlack">
+                                        {education.degree}
+                                    </h3>
+                                    {education.status === "current" && (
+                                        <span className="bg-[#c455e8] text-white text-xs px-2 py-1 rounded-full font-karla">
+                                            Current
+                                        </span>
+                                    )}
+                                </div>
+
+                                {/* School */}
+                                <div className="flex items-center space-x-2 ml-6">
+                                    <span className="text-[#8b5cf6] text-sm">🏫</span>
+                                    <p className="font-karla text-base text-gray-700 font-medium">
+                                        {education.school}
+                                    </p>
+                                </div>
+
+                                {/* GPA and Graduation Info */}
+                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center ml-6 space-y-2 sm:space-y-0">
+                                    <div className="flex items-center space-x-2">
+                                        <span className="text-[#10b981] text-sm">📊</span>
+                                        <span className="font-karla text-sm font-semibold text-gray-600">
+                                            GPA:
+                                        </span>
+                                        <span className="font-karla text-base font-bold text-[#10b981]">
+                                            {education.gpa}
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                        <span className="text-[#f59e0b] text-sm">📅</span>
+                                        <span className="font-karla text-sm text-gray-600">
+                                            {education.graduation}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export const Interest = ({ setOpen }) => {
+    const data = [
+        "Digital Transformation",
+        "Generative AI",
+        "Business Analytics",
+        "Computer Graphic"
+    ]
+    return <InfoModal title={'Interests'} setOpen={setOpen} data={data} />
+}
+
+
+export const Skills = ({ setOpen }) => {
+    const data = [
+        {
+            title: '💻 Technical Skills',
+            content: [
+                {
+                    title: '🔥 Programming Languages',
+                    content: 'C, C++, C#, Python, Java, SQL',
+                    icon: '⚡',
+                    color: 'from-blue-100 to-blue-200'
+                },
+                {
+                    title: '🧠 Data, Analytics & AI',
+                    content: 'Business Analytics, Data Visualization (Power BI), Generative AI, Python (Data Processing), SQL',
+                    icon: '📊',
+                    color: 'from-teal-100 to-teal-200'
+                },
+                {
+                    title: '🖌️ Design & Prototyping',
+                    content: 'Figma (UX/UI), ERD (Database Design)',
+                    icon: '🖌️',
+                    color: 'from-yellow-100 to-yellow-200'
+                },
+                {
+                    title: '🌐 Web Technologies',
+                    content: 'HTML, CSS, JavaScript, TypeScript',
+                    icon: '🚀',
+                    color: 'from-green-100 to-green-200'
+                },
+                {
+                    title: '⚛️ Frameworks & Libraries',
+                    content: 'React, Next.js, Three.js, React-Three-Fiber, Astro, Vue.js',
+                    icon: '🎯',
+                    color: 'from-purple-100 to-purple-200'
+                },
+                {
+                    title: '🎨 UI Frameworks',
+                    content: 'Tailwind CSS',
+                    icon: '✨',
+                    color: 'from-pink-100 to-pink-200'
+                },
+                {
+                    title: '🎮 Game Development & 3D',
+                    content: 'Unity, Blender',
+                    icon: '🎲',
+                    color: 'from-orange-100 to-orange-200'
+                },
+                {
+                    title: '📊 Version Control',
+                    content: 'Git, GitHub',
+                    icon: '🔄',
+                    color: 'from-gray-100 to-gray-200'
+                }
+            ]
+        },
+        {
+            title: '🗣️ Language Skills',
+            content: [
+                {
+                    title: '🇬🇧 English',
+                    level: 'Advanced (C1)',
+                    details: 'Certified by Stafford House UK',
+                    icon: '🏆',
+                    proficiency: 90
+                },
+                {
+                    title: '🇯🇵 Japanese',
+                    level: 'Elementary',
+                    details: 'Conversational basics',
+                    icon: '🌸',
+                    proficiency: 30
+                },
+                {
+                    title: '🇹🇭 Thai',
+                    level: 'Native Speaker',
+                    details: 'Mother tongue',
+                    icon: '🏠',
+                    proficiency: 100
+                }
+            ]
+        }
+    ];
+
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const handlePrevGame = () => {
+        setCurrentPage(currentPage === 0 ? 1 : 0);
+    };
+
+    const handleNextGame = () => {
+        setCurrentPage(currentPage === 0 ? 1 : 0);
+    };
+
+    return (
+        <div className="fixed w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-50">
+            <div className="bg-white border-2 border-thisBlack rounded-xl overflow-hidden w-3/4 max-w-2xl flex flex-col relative">
+                {/* Header */}
+                <div className="bg-gradientcustom text-thisBlack border-b-2 border-thisBlack h-16 text-center flex justify-center items-center font-payToneOne text-2xl relative">
+                    Skills & Expertise
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setOpen(false)}
+                        className="absolute top-2 right-2 font-karla bg-thisBlack text-white rounded-full h-8 w-8 flex justify-center items-center hover:bg-white hover:text-thisBlack transition"
+                    >
+                        X
+                    </button>
+                </div>
+
+                <div className="p-6">
+                    {/* Navigation */}
+                    <div className="flex justify-between items-center mb-6">
                         <button
                             onClick={handlePrevGame}
-                            className="px-4 py-2 bg-[#f3bfe1] hover:bg-[#ef9ad2] text-white rounded-full"
+                            className="px-6 py-3 bg-gradient-to-r from-[#f3bfe1] to-[#ef9ad2] hover:from-[#ef9ad2] hover:to-[#e879c7] text-white rounded-full font-karla font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            &lt;
+                            ← Previous
                         </button>
-                        <h3 className="font-karla text-lg">{data[currentPage].title}</h3>
+                        <h3 className="font-karla text-xl font-bold text-thisBlack flex items-center">
+                            {data[currentPage].title}
+                        </h3>
                         <button
                             onClick={handleNextGame}
-                            className="px-4 py-2 bg-lightPink hover:bg-[#ef9ad2] text-white rounded-full"
+                            className="px-6 py-3 bg-gradient-to-r from-[#c455e8] to-[#8b5cf6] hover:from-[#8b5cf6] hover:to-[#7c3aed] text-white rounded-full font-karla font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         >
-                            &gt;
+                            Next →
                         </button>
                     </div>
 
-                    <div className="flex flex-col space-y-3">
-                        {currentPage === 1 ? (
-                            <ul className="list-none pl-0 space-y-2">
-                                {data[currentPage].content.map((item, index) => (
-                                    <li key={index} className="text-thisBlack font-karla flex items-center">
-                                        <span className="text-thisBlack mr-2">★</span>{item}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            data[currentPage].content.map((item, index) => (
-                                <div key={index} className="text-thisBlack rounded text-base font-karla flex justify-start items-center px-4">
-                                    {/* Display Content Titles and Descriptions */}
-                                    {typeof item === 'object' ? (
-                                        <div>
-                                            <h4 className="font-bold text-left">{item.title}</h4>
-                                            <p className="text-left">{item.content}</p>
+                    {/* Content */}
+                    <div className="space-y-4 max-h-96 overflow-y-auto">
+                        {currentPage === 0 ? (
+                            // Technical Skills
+                            <div className="grid gap-4">
+                                {data[currentPage].content.map((skill, index) => (
+                                    <div key={index} className={`bg-gradient-to-r ${skill.color} border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105`}>
+                                        <div className="flex items-start space-x-3">
+                                            <span className="text-2xl">{skill.icon}</span>
+                                            <div className="flex-1">
+                                                <h4 className="font-karla font-bold text-thisBlack text-lg mb-2">
+                                                    {skill.title}
+                                                </h4>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {skill.content.split(', ').map((tech, techIndex) => (
+                                                        <span key={techIndex} className="bg-white bg-opacity-80 px-3 py-1 rounded-full text-sm font-karla font-medium text-gray-700 shadow-sm">
+                                                            {tech}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
-                                    ) : (
-                                        <p>{item}</p>
-                                    )}
-                                </div>
-                            ))
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            // Language Skills
+                            <div className="space-y-4">
+                                {data[currentPage].content.map((language, index) => (
+                                    <div key={index} className="bg-gradient-to-r from-[#ffeaf8] to-[#f8f4ff] border border-[#e1bee7] rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="flex items-center space-x-3">
+                                                <span className="text-2xl">{language.icon}</span>
+                                                <div>
+                                                    <h4 className="font-karla font-bold text-thisBlack text-lg">
+                                                        {language.title}
+                                                    </h4>
+                                                    <p className="font-karla text-sm text-gray-600">
+                                                        {language.details}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <span className="bg-[#c455e8] text-white px-3 py-1 rounded-full text-sm font-karla font-semibold">
+                                                {language.level}
+                                            </span>
+                                        </div>
+
+                                        {/* Proficiency Bar */}
+                                        <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                            <div
+                                                className="bg-gradient-to-r from-[#c455e8] to-[#8b5cf6] h-full rounded-full transition-all duration-1000 ease-out"
+                                                style={{ width: `${language.proficiency}%` }}
+                                            ></div>
+                                        </div>
+                                        <div className="flex justify-end mt-1">
+                                            <span className="text-xs font-karla font-semibold text-gray-500">
+                                                {language.proficiency}%
+                                            </span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         )}
+                    </div>
+
+                    {/* Page Indicator */}
+                    <div className="flex justify-center mt-6 space-x-2">
+                        {data.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentPage(index)}
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${currentPage === index
+                                    ? 'bg-[#c455e8] scale-125'
+                                    : 'bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                            ></button>
+                        ))}
                     </div>
                 </div>
             </div>
