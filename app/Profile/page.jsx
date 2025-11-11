@@ -4,11 +4,11 @@ import { Canvas } from "@react-three/fiber";
 import Experience from "@/Profile/Experience";
 import { KnowMe, Education, Interest, Skills } from "@/components/profile/Modal";
 import { Suspense, useState, useEffect } from "react";
-import { BackButton } from "@/components/NavigateButton";
-import { LoadingScreen } from "@/components/LoadingScreen";
-import HintMessage from "@/components/HintMessage";
+import { BackButton } from "@/components/navigation/NavigateButton";
+import { LoadingScreen } from "@/components/layout/LoadingScreen";
+import HintMessage from "@/components/ui/HintMessage";
 import { roomSentences } from "@/utils/Sentence";
-import { SectionButton } from "@/components/GlobalSectionButton";
+import { SectionButton } from "@/components/navigation/GlobalSectionButton";
 
 export default function Profile() {
     const [openKnowMe, setOpenKnowMe] = useState(false);

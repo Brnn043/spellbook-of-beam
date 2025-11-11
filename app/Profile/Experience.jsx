@@ -1,7 +1,7 @@
 import Bedroom from "@/components/profile/Bedroom";
-import { QuestionMark } from "@/components/QuestionMark";
+import { QuestionMark } from "@/components/ui/QuestionMark";
 import { BakeShadows } from "@react-three/drei";
-import Character from "@/components/StaticCharacter";
+import Character from "@/components/characters/StaticCharacter";
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 import gsap from "gsap";

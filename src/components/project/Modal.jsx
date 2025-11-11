@@ -1,5 +1,5 @@
-import { ProjectModal } from "../GlobalModal";
-import { websiteProjects, gameProjects, competitiveProjects, otherProjects } from "../../data/projects";
+import { ProjectModal } from "../modals";
+import { websiteProjects, gameProjects, competitiveProjects, otherProjects } from "../../data";
 
 export const Website = ({ setOpen }) => {
     return <ProjectModal title={'Web Development'} setOpen={setOpen} data={websiteProjects} />

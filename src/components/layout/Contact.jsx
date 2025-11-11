@@ -8,7 +8,7 @@ const ContactModal = ({ isOpen, closeModal }) => {
             <div className="bg-gradientcustom2 border-2 border-thisBlack p-6 rounded-2xl text-center space-y-4">
                 <h2 className="font-payToneOne text-thisBlack text-2xl">Contact</h2>
                 <div className="font-karla text-left">
-                    <p>Email: bm.raksakul@gmail.com</p>
+                    <p>Email: raksakul.hiranas@gmail.com</p>
                     <p>
                         GitHub:{" "}
                         <a

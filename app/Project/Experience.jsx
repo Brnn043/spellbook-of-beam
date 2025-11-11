@@ -1,7 +1,7 @@
 import PotionRoom from "@/components/project/PotionRoom";
-import { QuestionMark } from "@/components/QuestionMark";
+import { QuestionMark } from "@/components/ui/QuestionMark";
 import { BakeShadows } from "@react-three/drei";
-import Character from "@/components/StaticCharacter";
+import Character from "@/components/characters/StaticCharacter";
 import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useEffect } from "react";

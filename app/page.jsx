@@ -1,18 +1,18 @@
 'use client';
-import MoveButton from '@/components/MoveButton';
+import MoveButton from '@/components/navigation/MoveButton';
 import Experience from './Experience';
 import { KeyboardControls, Preload } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useState } from 'react';
-import Visit from '@/components/Visit';
-import { useDoorTracker } from '@/components/useDoorTracker';
+import Visit from '@/components/layout/Visit';
+import { useDoorTracker } from '@/components/hooks/useDoorTracker';
 import { Door } from '@/utils/Door';
-import WelcomeModal from '@/components/WelcomeModal';
-import HintMessage from '@/components/HintMessage';
-import { NavigateButton } from '@/components/NavigateButton';
-import { LoadingScreen } from '@/components/LoadingScreen';
+import WelcomeModal from '@/components/modals/WelcomeModal';
+import HintMessage from '@/components/ui/HintMessage';
+import { NavigateButton } from '@/components/navigation/NavigateButton';
+import { LoadingScreen } from '@/components/layout/LoadingScreen';
 import { hallwaySentences } from '@/utils/Sentence';
-import { ContactButton } from '@/components/Contact';
+import { ContactButton } from '@/components/layout/Contact';
 
 
 export default function Page() {

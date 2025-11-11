@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { InfoModal, ProjectModal } from "../GlobalModal";
+import { InfoModal, ProjectModal } from "../modals";
 import { ModalContainer, ModalHeader, EducationCard } from "../ui/ModalComponents";
 import { TechnicalSkillCard, LanguageSkillCard, SkillsNavigation, PageIndicators } from "../ui/SkillComponents";
-import { personalInfo } from "../../data/personal";
-import { educationData } from "../../data/education";
-import { skillsData, interestsData } from "../../data/skills";
+import { personalInfo, educationData, skillsData, interestsData } from "../../data";
 
 export const KnowMe = ({ setOpen }) => {
     return <ProjectModal title={'About Me'} data={personalInfo} setOpen={setOpen} />
