@@ -236,14 +236,14 @@ export const Skills = ({ setOpen }) => {
                 {
                     title: '🇬🇧 English',
                     level: 'Advanced (C1)',
-                    details: 'Certified by Stafford House UK',
+                    details: '3-month immersive study at Stafford House, UK (Mar-May 2023). Confident in daily multicultural communication.',
                     icon: '🏆',
                     proficiency: 90
                 },
                 {
                     title: '🇯🇵 Japanese',
                     level: 'Elementary',
-                    details: 'Conversational basics',
+                    details: '2-month VR Developer Internship in Tokyo (Jun-Jul 2025). Applied practical speaking & listening skills daily.',
                     icon: '🌸',
                     proficiency: 30
                 },
@@ -333,34 +333,53 @@ export const Skills = ({ setOpen }) => {
                             <div className="space-y-4">
                                 {data[currentPage].content.map((language, index) => (
                                     <div key={index} className="bg-gradient-to-r from-[#ffeaf8] to-[#f8f4ff] border border-[#e1bee7] rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300">
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="flex items-center space-x-3">
-                                                <span className="text-2xl">{language.icon}</span>
-                                                <div>
-                                                    <h4 className="font-karla font-bold text-thisBlack text-lg">
-                                                        {language.title}
-                                                    </h4>
-                                                    <p className="font-karla text-sm text-gray-600">
-                                                        {language.details}
-                                                    </p>
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className="flex items-start space-x-3 flex-1">
+                                                <span className="text-3xl mt-1">{language.icon}</span>
+                                                <div className="flex-1">
+                                                    <div className="flex items-center space-x-3 mb-2">
+                                                        <h4 className="font-karla font-bold text-thisBlack text-lg">
+                                                            {language.title}
+                                                        </h4>
+                                                        <span className="bg-[#c455e8] text-white px-3 py-1 rounded-full text-sm font-karla font-semibold">
+                                                            {language.level}
+                                                        </span>
+                                                    </div>
+
+                                                    {/* Detailed Description */}
+                                                    <div className="bg-white bg-opacity-60 rounded-lg p-3 mb-3">
+                                                        <p className="font-karla text-sm text-gray-700 leading-relaxed">
+                                                            {language.details}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <span className="bg-[#c455e8] text-white px-3 py-1 rounded-full text-sm font-karla font-semibold">
-                                                {language.level}
-                                            </span>
                                         </div>
 
-                                        {/* Proficiency Bar */}
-                                        <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                                            <div
-                                                className="bg-gradient-to-r from-[#c455e8] to-[#8b5cf6] h-full rounded-full transition-all duration-1000 ease-out"
-                                                style={{ width: `${language.proficiency}%` }}
-                                            ></div>
-                                        </div>
-                                        <div className="flex justify-end mt-1">
-                                            <span className="text-xs font-karla font-semibold text-gray-500">
-                                                {language.proficiency}%
-                                            </span>
+                                        {/* Proficiency Section */}
+                                        <div className="space-y-2">
+                                            <div className="flex justify-between items-center">
+                                                <span className="font-karla text-sm font-semibold text-gray-600">
+                                                    Proficiency Level
+                                                </span>
+                                                <span className="font-karla text-sm font-bold text-[#c455e8]">
+                                                    {language.proficiency}%
+                                                </span>
+                                            </div>
+
+                                            {/* Proficiency Bar */}
+                                            <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                                <div
+                                                    className="bg-gradient-to-r from-[#c455e8] to-[#8b5cf6] h-full rounded-full transition-all duration-1000 ease-out flex items-center justify-end pr-2"
+                                                    style={{ width: `${language.proficiency}%` }}
+                                                >
+                                                    {language.proficiency >= 20 && (
+                                                        <span className="text-white text-xs font-bold">
+                                                            {language.proficiency}%
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
