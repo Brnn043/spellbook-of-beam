@@ -16,12 +16,12 @@ export default function Experience() {
     // Update camera position every frame based on context
     useFrame(() => {
         // Smooth camera movement with lerp
-        camera.position.x = 0;
-        camera.position.y += (cameraY - camera.position.y) * 0.05; // Slower lerp for smoother movement
+        camera.position.x = -2; // Move camera slightly to the left to show character on left side
+        camera.position.y += (cameraY - camera.position.y) * 0.05;
         camera.position.z = 8;
 
-        // Tilt camera to look slightly down at the models
-        camera.rotation.x = -0.2;
+        // Tilt camera to look at the models
+        camera.rotation.x = -0.1;
         camera.rotation.y = 0;
         camera.rotation.z = 0;
 
@@ -54,37 +54,37 @@ export default function Experience() {
 
             {/* Main group of 3D Models arranged vertically */}
             <group ref={groupRef}>
-                {/* Bedroom - Top section (Around Y=15) */}
+                {/* Bedroom - Top section (Around Y=15) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={1} rotationIntensity={0.2} floatIntensity={0.5}>
-                        <group position={[0, 15, 0]} scale={0.8} rotation={[0, Math.PI * 0.25, 0]}>
+                        <group position={[2, 15, 0]} scale={0.6} rotation={[0, -Math.PI * 0.25, 0]}>
                             <Bedroom />
                         </group>
                     </Float>
                 </Suspense>
 
-                {/* Character - Upper-middle section (Around Y=8) */}
+                {/* Character - Upper-middle section (Around Y=8) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
-                        <group position={[2, 8, 0]} scale={1} rotation={[0, Math.PI, 0]}>
+                        <group position={[2, 8, 2]} scale={1.2} rotation={[0, -Math.PI * 0.15, 0]}>
                             <Character />
                         </group>
                     </Float>
                 </Suspense>
 
-                {/* PotionRoom - Middle section (Around Y=0) */}
+                {/* PotionRoom - Middle section (Around Y=0) - Position on the LEFT */}
                 <Suspense fallback={null}>
                     <Float speed={1.2} rotationIntensity={0.2} floatIntensity={0.6}>
-                        <group position={[-1, 0, 0]} scale={0.8} rotation={[0, -Math.PI * 0.25, 0]}>
+                        <group position={[-3, 0, 0]} scale={0.6} rotation={[0, Math.PI * 0.25, 0]}>
                             <PotionRoom />
                         </group>
                     </Float>
                 </Suspense>
 
-                {/* ExploreRoom - Bottom section (Around Y=-10) */}
+                {/* ExploreRoom - Bottom section (Around Y=-10) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={0.8} rotationIntensity={0.15} floatIntensity={0.4}>
-                        <group position={[1, -10, 0]} scale={0.8} rotation={[0, Math.PI * 0.5, 0]}>
+                        <group position={[2, -10, 0]} scale={0.6} rotation={[0, -Math.PI * 0.5, 0]}>
                             <ExploreRoom />
                         </group>
                     </Float>
