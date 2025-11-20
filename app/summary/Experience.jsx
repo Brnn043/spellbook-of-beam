@@ -28,25 +28,28 @@ export default function Experience() {
         console.log('Camera Y:', camera.position.y.toFixed(2), 'Target:', cameraY);
     }); return (
         <>
+            {/* Pastel gradient background color */}
+            <color attach="background" args={['#e8dff5']} />
+
             {/* Lighting */}
-            <ambientLight intensity={0.6} />
+            <ambientLight intensity={0.8} />
             <directionalLight
                 position={[10, 10, 5]}
-                intensity={1.2}
+                intensity={1.5}
                 castShadow
             />
-            <pointLight position={[-10, 5, -5]} intensity={0.5} color="#8B5CF6" />
-            <pointLight position={[10, -5, -5]} intensity={0.5} color="#EC4899" />
+            <pointLight position={[-10, 5, -5]} intensity={0.6} color="#FFB6C1" />
+            <pointLight position={[10, -5, -5]} intensity={0.6} color="#DDA0DD" />
 
-            {/* Stars background */}
+            {/* Stars background with pastel colors */}
             <Stars
                 radius={100}
                 depth={50}
-                count={5000}
-                factor={4}
-                saturation={0}
+                count={3000}
+                factor={3}
+                saturation={0.3}
                 fade={true}
-                speed={0.5}
+                speed={0.3}
             />
 
             {/* Main group of 3D Models arranged vertically */}

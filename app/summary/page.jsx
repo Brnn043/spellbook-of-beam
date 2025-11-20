@@ -17,7 +17,8 @@ export default function Summary() {
 
     return (
         <CameraContext.Provider value={{ cameraY, setCameraY }}>
-            <div className="min-h-screen">
+            <div className="min-h-screen bg-transparent">
+
                 {/* Fixed 3D Background */}
                 <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
                     <Suspense fallback={<LoadingScreen />}>
@@ -39,14 +40,32 @@ export default function Summary() {
                     {/* Hero Section */}
                     <ScrollSection targetY={20} setCameraY={setCameraY}>
                         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-                            <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-300/30">
-                                <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 bg-clip-text mb-6">
+                            <div className="bg-gradient-to-b from-pink-50 to-purple-50 rounded-3xl p-8 md:p-12 border-[6px] border-white shadow-[0_0_0_4px_#EC4899] max-w-4xl relative">
+                                {/* Window top bar */}
+                                <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-r from-pink-200 to-purple-200 rounded-t-3xl flex items-center justify-between px-4 border-b-4 border-pink-300">
+                                    <div className="flex gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-red-400 border-2 border-red-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-yellow-400 border-2 border-yellow-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-green-400 border-2 border-green-500"></div>
+                                    </div>
+                                    <p className="text-xs font-bold text-pink-600">WELCOME.exe</p>
+                                    <div className="w-12"></div>
+                                </div>
+                                <div className="mt-8">
+                                    <div className="inline-block bg-gradient-to-r from-pink-200 to-purple-200 rounded-full px-6 py-2 mb-6 border-3 border-pink-400">
+                                        <p className="text-sm font-bold text-pink-600">✨ WELCOME ✨</p>
+                                    </div>
+                                </div>
+                                <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight" style={{
+                                    color: '#FF69B4',
+                                    textShadow: '4px 4px 0px #FFB6C1, 6px 6px 0px #DDA0DD'
+                                }}>
                                     Beam's Portfolio
                                 </h1>
-                                <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-2xl">
-                                    Welcome to my magical realm of creativity and code ✨
+                                <p className="text-xl md:text-2xl text-purple-700 font-semibold mb-6">
+                                    スペルブック オブ ビーム ✨
                                 </p>
-                                <div className="text-lg text-purple-200">
+                                <div className="text-base text-gray-700 bg-white/80 rounded-2xl p-6 border-4 border-pink-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]" style={{ borderStyle: 'solid' }}>
                                     {personalInfo.find(p => p.title.includes('Introduction'))?.description}
                                 </div>
                             </div>
@@ -56,13 +75,28 @@ export default function Summary() {
                     {/* Spacer for 3D scroll - Character section */}
                     <ScrollSection targetY={8} setCameraY={setCameraY}>
                         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-                            <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-300/30 max-w-2xl">
-                                <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text mb-6">
-                                    Meet the Developer 🧙‍♀️
-                                </h2>
-                                <p className="text-xl text-purple-100">
-                                    Scroll down to explore my journey through different magical realms
-                                </p>
+                            <div className="bg-gradient-to-b from-blue-50 to-cyan-50 rounded-3xl p-10 border-[6px] border-white shadow-[0_0_0_4px_#3B82F6] max-w-2xl relative">
+                                <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-t-3xl flex items-center justify-between px-4 border-b-4 border-blue-300">
+                                    <div className="flex gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-red-400 border-2 border-red-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-yellow-400 border-2 border-yellow-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-green-400 border-2 border-green-500"></div>
+                                    </div>
+                                    <p className="text-xs font-bold text-blue-600">DEVELOPER.exe</p>
+                                    <div className="w-12"></div>
+                                </div>
+                                <div className="mt-6">
+                                    <div className="text-6xl mb-4">🧙‍♀️</div>
+                                    <h2 className="text-4xl md:text-5xl font-black mb-4" style={{
+                                        color: '#4169E1',
+                                        textShadow: '3px 3px 0px #87CEEB'
+                                    }}>
+                                        Meet the Developer
+                                    </h2>
+                                    <p className="text-lg text-blue-700 font-medium">
+                                        Scroll down to explore my journey ⭐
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </ScrollSection>
@@ -70,13 +104,28 @@ export default function Summary() {
                     {/* Spacer for 3D scroll - PotionRoom section */}
                     <ScrollSection targetY={0} setCameraY={setCameraY}>
                         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-                            <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-300/30 max-w-2xl">
-                                <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-orange-300 to-pink-300 bg-clip-text mb-6">
-                                    Potion Brewing 🧪
-                                </h2>
-                                <p className="text-xl text-purple-100">
-                                    Where projects are crafted with magic and code
-                                </p>
+                            <div className="bg-gradient-to-b from-orange-50 to-yellow-50 rounded-3xl p-10 border-[6px] border-white shadow-[0_0_0_4px_#FB923C] max-w-2xl relative">
+                                <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-r from-orange-200 to-yellow-200 rounded-t-3xl flex items-center justify-between px-4 border-b-4 border-orange-300">
+                                    <div className="flex gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-red-400 border-2 border-red-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-yellow-400 border-2 border-yellow-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-green-400 border-2 border-green-500"></div>
+                                    </div>
+                                    <p className="text-xs font-bold text-orange-600">POTION.exe</p>
+                                    <div className="w-12"></div>
+                                </div>
+                                <div className="mt-6">
+                                    <div className="text-6xl mb-4">🧪</div>
+                                    <h2 className="text-4xl md:text-5xl font-black mb-4" style={{
+                                        color: '#FF6347',
+                                        textShadow: '3px 3px 0px #FFB347'
+                                    }}>
+                                        Potion Brewing
+                                    </h2>
+                                    <p className="text-lg text-orange-700 font-medium">
+                                        Where projects are crafted with magic 🎨
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </ScrollSection>
@@ -84,13 +133,28 @@ export default function Summary() {
                     {/* Spacer for 3D scroll - ExploreRoom section */}
                     <ScrollSection targetY={-10} setCameraY={setCameraY}>
                         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-                            <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-300/30 max-w-2xl">
-                                <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-green-300 to-teal-300 bg-clip-text mb-6">
-                                    Adventure Room 🗺️
-                                </h2>
-                                <p className="text-xl text-purple-100">
-                                    Exploring new horizons and challenges
-                                </p>
+                            <div className="bg-gradient-to-b from-green-50 to-emerald-50 rounded-3xl p-10 border-[6px] border-white shadow-[0_0_0_4px_#22C55E] max-w-2xl relative">
+                                <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-r from-green-200 to-emerald-200 rounded-t-3xl flex items-center justify-between px-4 border-b-4 border-green-300">
+                                    <div className="flex gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-red-400 border-2 border-red-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-yellow-400 border-2 border-yellow-500"></div>
+                                        <div className="w-3 h-3 rounded-full bg-green-400 border-2 border-green-500"></div>
+                                    </div>
+                                    <p className="text-xs font-bold text-green-600">ADVENTURE.exe</p>
+                                    <div className="w-12"></div>
+                                </div>
+                                <div className="mt-6">
+                                    <div className="text-6xl mb-4">🗺️</div>
+                                    <h2 className="text-4xl md:text-5xl font-black mb-4" style={{
+                                        color: '#32CD32',
+                                        textShadow: '3px 3px 0px #90EE90'
+                                    }}>
+                                        Adventure Room
+                                    </h2>
+                                    <p className="text-lg text-green-700 font-medium">
+                                        Exploring new horizons 🌟
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </ScrollSection>
@@ -98,23 +162,30 @@ export default function Summary() {
                     {/* About Me Section */}
                     <section className="py-20 px-4">
                         <div className="max-w-6xl mx-auto">
-                            <h2 className="text-5xl font-bold text-center text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text mb-16">
-                                About Me 🌟
-                            </h2>
-                            <div className="grid md:grid-cols-2 gap-12">
+                            <div className="text-center mb-12">
+                                <div className="inline-block bg-white/90 backdrop-blur-md rounded-full px-8 py-4 border-4 border-pink-300 shadow-[6px_6px_0px_0px_rgba(236,72,153,0.3)]">
+                                    <h2 className="text-4xl md:text-5xl font-black" style={{
+                                        color: '#FF69B4',
+                                        textShadow: '2px 2px 0px #FFB6C1'
+                                    }}>
+                                        About Me 🌟
+                                    </h2>
+                                </div>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-8">
                                 {personalInfo.map((info, index) => (
-                                    <div key={index} className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/20 transform hover:scale-105 transition-all duration-300">
-                                        <h3 className="text-2xl font-semibold text-purple-200 mb-4 flex items-center gap-3">
+                                    <div key={index} className="bg-white/90 backdrop-blur-md rounded-2xl p-6 border-3 border-purple-200 shadow-[4px_4px_0px_0px_rgba(147,51,234,0.2)] transform hover:scale-105 hover:shadow-[6px_6px_0px_0px_rgba(147,51,234,0.3)] transition-all duration-300">
+                                        <h3 className="text-2xl font-bold text-purple-600 mb-3 flex items-center gap-3">
                                             <span className="text-3xl">{info.title.split(' ')[0]}</span>
                                             {info.title.replace(/^[^\s]+ /, '')}
                                         </h3>
-                                        <p className="text-purple-100 leading-relaxed">
+                                        <p className="text-gray-700 leading-relaxed">
                                             {info.description}
                                         </p>
                                         {info.tags && (
                                             <div className="flex flex-wrap gap-2 mt-4">
                                                 {info.tags.map((tag, tagIndex) => (
-                                                    <span key={tagIndex} className="px-3 py-1 bg-purple-500/20 text-purple-200 rounded-full text-sm">
+                                                    <span key={tagIndex} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold border-2 border-purple-300">
                                                         {tag}
                                                     </span>
                                                 ))}
