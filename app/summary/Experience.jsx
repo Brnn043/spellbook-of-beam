@@ -57,7 +57,7 @@ export default function Experience() {
                 {/* Bedroom - Top section (Around Y=15) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={1} rotationIntensity={0.2} floatIntensity={0.5}>
-                        <group position={[2, 15, 0]} scale={0.6} rotation={[0, -Math.PI * 0.25, 0]}>
+                        <group position={[-4.5, 17.5, 0]} scale={0.8} rotation={[0, -Math.PI * 0.25, 0]}>
                             <Bedroom />
                         </group>
                     </Float>
@@ -66,7 +66,7 @@ export default function Experience() {
                 {/* Character - Upper-middle section (Around Y=8) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
-                        <group position={[2, 8, 2]} scale={1.2} rotation={[0, -Math.PI * 0.15, 0]}>
+                        <group position={[1, 6, 2]} scale={2} rotation={[0, Math.PI * 0.75, 0]}>
                             <Character />
                         </group>
                     </Float>
@@ -75,7 +75,7 @@ export default function Experience() {
                 {/* PotionRoom - Middle section (Around Y=0) - Position on the LEFT */}
                 <Suspense fallback={null}>
                     <Float speed={1.2} rotationIntensity={0.2} floatIntensity={0.6}>
-                        <group position={[-3, 0, 0]} scale={0.6} rotation={[0, Math.PI * 0.25, 0]}>
+                        <group position={[-4.5, -2, 0]} scale={0.8} rotation={[0, -Math.PI * 0.1, 0]}>
                             <PotionRoom />
                         </group>
                     </Float>
@@ -84,7 +84,7 @@ export default function Experience() {
                 {/* ExploreRoom - Bottom section (Around Y=-10) - Position on the RIGHT */}
                 <Suspense fallback={null}>
                     <Float speed={0.8} rotationIntensity={0.15} floatIntensity={0.4}>
-                        <group position={[2, -10, 0]} scale={0.6} rotation={[0, -Math.PI * 0.5, 0]}>
+                        <group position={[0.5, -12, 0]} scale={0.8} rotation={[0, -Math.PI * 0.4, 0]}>
                             <ExploreRoom />
                         </group>
                     </Float>
