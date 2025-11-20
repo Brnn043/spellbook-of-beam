@@ -41,17 +41,6 @@ export default function Experience() {
             <pointLight position={[-10, 5, -5]} intensity={0.6} color="#FFB6C1" />
             <pointLight position={[10, -5, -5]} intensity={0.6} color="#DDA0DD" />
 
-            {/* Stars background with pastel colors */}
-            <Stars
-                radius={100}
-                depth={50}
-                count={3000}
-                factor={3}
-                saturation={0.3}
-                fade={true}
-                speed={0.3}
-            />
-
             {/* Main group of 3D Models arranged vertically */}
             <group ref={groupRef}>
                 {/* Bedroom - Top section (Around Y=15) - Position on the RIGHT */}

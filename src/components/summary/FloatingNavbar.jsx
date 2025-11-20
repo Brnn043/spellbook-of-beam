@@ -6,7 +6,6 @@ export function FloatingNavbar() {
 
     const sections = [
         { id: 'hero', label: '🏠', name: 'Home' },
-        { id: 'about', label: '🌟', name: 'About' },
         { id: 'education', label: '🎓', name: 'Education' },
         { id: 'skills', label: '🔮', name: 'Skills' },
         { id: 'projects', label: '🎨', name: 'Projects' },
@@ -59,8 +58,8 @@ export function FloatingNavbar() {
                                 key={id}
                                 onClick={() => scrollToSection(id)}
                                 className={`relative group w-14 h-14 rounded-2xl transition-all duration-300 flex items-center justify-center ${activeSection === id
-                                        ? 'bg-gradient-to-br from-pink-400 to-purple-400 text-white scale-110 shadow-[4px_4px_0px_0px_rgba(236,72,153,0.5)]'
-                                        : 'bg-white/60 hover:bg-white text-gray-700 hover:scale-105 border-2 border-pink-200'
+                                    ? 'bg-gradient-to-br from-pink-400 to-purple-400 text-white scale-110 shadow-[4px_4px_0px_0px_rgba(236,72,153,0.5)]'
+                                    : 'bg-white/60 hover:bg-white text-gray-700 hover:scale-105 border-2 border-pink-200'
                                     }`}
                                 title={name}
                             >
@@ -98,8 +97,8 @@ export function FloatingNavbar() {
                                 key={id}
                                 onClick={() => scrollToSection(id)}
                                 className={`w-10 h-10 rounded-xl transition-all duration-300 flex items-center justify-center ${activeSection === id
-                                        ? 'bg-gradient-to-br from-pink-400 to-purple-400 text-white scale-110 shadow-[2px_2px_0px_0px_rgba(236,72,153,0.5)]'
-                                        : 'bg-white/60 hover:bg-white text-gray-700 border-2 border-pink-200'
+                                    ? 'bg-gradient-to-br from-pink-400 to-purple-400 text-white scale-110 shadow-[2px_2px_0px_0px_rgba(236,72,153,0.5)]'
+                                    : 'bg-white/60 hover:bg-white text-gray-700 border-2 border-pink-200'
                                     }`}
                                 title={name}
                             >

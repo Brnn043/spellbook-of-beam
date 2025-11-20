@@ -8,7 +8,6 @@ import {
     DeveloperSection,
     PotionSection,
     AdventureSection,
-    AboutSection,
     EducationSection,
     SkillsSection,
     ProjectsSection,
@@ -32,8 +31,8 @@ export default function Summary() {
 
                 {/* Main Content Wrapper with padding for sidebar/navbar */}
                 <div className="md:pl-20 pt-16 md:pt-0">
-                    {/* Fixed 3D Background */}
-                    <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
+                    {/* Fixed 3D Background - Only visible for hero sections */}
+                    <div className={`fixed top-0 left-0 w-full h-full -z-10 pointer-events-none transition-opacity duration-500 ${cameraY < -15 ? 'opacity-0' : 'opacity-100'}`}>
                         <Suspense fallback={<LoadingScreen />}>
                             <Canvas
                                 camera={{
@@ -70,9 +69,6 @@ export default function Summary() {
                         </ScrollSection>
 
                         {/* Content Sections */}
-                        <div id="about">
-                            <AboutSection />
-                        </div>
                         <div id="education">
                             <EducationSection />
                         </div>
