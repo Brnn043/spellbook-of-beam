@@ -19,7 +19,10 @@ May you enjoy the magic that awaits within. 🔮
 
 **Landing Page** (`/`): Choose your viewing experience
 - **Quick View** — Fast, mobile-friendly scrolling portfolio with smooth animations
+  <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/ed6b717d-5f7c-4f60-a101-e612fe5ede42" />
+
 - **3D Explore** — Travel through the enchanted hallway by moving left and right. Each room holds its own secrets — click on the elements to reveal the magic within. 🪄
+  <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/d2eb2330-8dae-4935-8c95-b9a2ecbe3159" />
 
 ### Visit the Website:
 To enter the mystical world and explore the magic for yourself, cast a spell [here](https://spellbook-of-beam.vercel.app). ✨
