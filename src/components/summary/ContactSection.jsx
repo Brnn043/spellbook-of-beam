@@ -22,10 +22,10 @@ export function ContactSection() {
                             color: '#EC4899',
                             textShadow: '3px 3px 0px #F9A8D4'
                         }}>
-                            Let's Create Magic Together ✨
+                            Let&apos;s Create Magic Together ✨
                         </h2>
                         <p className="text-xl text-purple-600 mb-8 font-medium">
-                            Ready to bring your ideas to life? Let's connect and make something amazing!
+                            Ready to bring your ideas to life? Let&apos;s connect and make something amazing!
                         </p>
 
                         {/* Contact Links - All as buttons for consistency */}

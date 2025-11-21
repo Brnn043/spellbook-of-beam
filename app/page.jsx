@@ -86,9 +86,9 @@ export default function HomePage() {
                   </p>
 
                   <div className="bg-gradient-to-r from-pink-200 to-purple-200 rounded-full py-2 px-6 text-center border-3 border-pink-300">
-                    <span className="text-pink-600 font-bold group-hover:text-purple-600 transition-colors">
-                      Let's Go! →
-                    </span>
+                      <span className="text-pink-600 font-bold group-hover:text-purple-600 transition-colors">
+                        Let&apos;s Go! →
+                      </span>
                   </div>
                 </div>
               </div>

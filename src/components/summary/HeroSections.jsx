@@ -24,7 +24,7 @@ export function HeroSection() {
                         color: '#FF69B4',
                         textShadow: '4px 4px 0px #FFB6C1, 6px 6px 0px #DDA0DD'
                     }}>
-                        Beam's Portfolio
+                        Beam&apos;s Portfolio
                     </h1>
                     <p className="text-xl md:text-2xl text-purple-700 font-semibold mb-6">
                         スペルブック オブ ビーム ✨
