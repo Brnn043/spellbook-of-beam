@@ -1,5 +1,5 @@
-import Character from "../src/components/characters/Character"
-import Hallway from "../src/components/layout/Hallway"
+import Character from "@/components/characters/Character"
+import Hallway from "@/components/layout/Hallway"
 
 export default function Experience({ controls, openModal, checkDoorTrigger }) {
     return <>

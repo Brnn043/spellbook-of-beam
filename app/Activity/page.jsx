@@ -1,7 +1,7 @@
 'use client';
 import { OrbitControls, Preload } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Experience from "@/Activity/Experience";
+import Experience from "@/activity/Experience";
 import { Work } from "@/components/activity/Modal";
 import { Suspense, useState } from "react";
 import { BackButton } from "@/components/navigation/NavigateButton";
