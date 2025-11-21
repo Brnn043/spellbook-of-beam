@@ -88,4 +88,9 @@ export const contactLinks = [
         link: 'https://linkedin.com/in/raksakul-hiranas',
         linkTitle: 'Raksakul Hiranas'
     },
+    {
+        title: 'Instagram',
+        link: 'https://instagram.com/brnnbm',
+        linkTitle: '@brnnbm'
+    },
 ];

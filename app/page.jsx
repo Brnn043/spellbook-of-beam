@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { contactLinks } from '@/data/personal';
 
 export default function HomePage() {
   const [hoveredOption, setHoveredOption] = useState(null);
@@ -165,6 +166,50 @@ export default function HomePage() {
               </div>
             </div>
           </Link>
+        </div>
+
+        {/* Contact Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl border-4 border-pink-300 shadow-[8px_8px_0px_0px_rgba(236,72,153,0.3)] p-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-black mb-3" style={{
+              color: '#FF1493',
+              textShadow: '3px 3px 0px #FFB6C1'
+            }}>
+              Let&apos;s Connect! 💌
+            </h2>
+            <p className="text-lg text-purple-700 font-semibold mb-6">
+              Feel free to reach out through any of these channels
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {contactLinks.map((contact, index) => {
+                const gradients = [
+                  'from-red-400 to-orange-400',
+                  'from-gray-700 to-gray-900',
+                  'from-blue-500 to-blue-700',
+                  'from-pink-500 to-purple-500'
+                ];
+                const hoverGradients = [
+                  'hover:from-red-500 hover:to-orange-500',
+                  'hover:from-gray-800 hover:to-black',
+                  'hover:from-blue-600 hover:to-blue-800',
+                  'hover:from-pink-600 hover:to-purple-600'
+                ];
+
+                return (
+                  <a
+                    key={index}
+                    href={contact.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`bg-gradient-to-r ${gradients[index]} ${hoverGradients[index]} text-white font-bold py-3 px-6 rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-xl border-4 border-white`}
+                  >
+                    {contact.title}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>
