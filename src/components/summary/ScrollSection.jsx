@@ -18,5 +18,5 @@ export function ScrollSection({ children, targetY, setCameraY }) {
         }
     };
 
-    return <div ref={sectionRef}>{children}</div>;
+    return <div ref={sectionRef} style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }} className="min-h-screen">{children}</div>;
 }

@@ -31,8 +31,8 @@ export default function Summary() {
 
                 {/* Main Content Wrapper with padding for sidebar/navbar */}
                 <div className="md:pl-32 pt-16 md:pt-0">
-                    {/* Fixed 3D Background - Only visible for hero sections */}
-                    <div className={`fixed top-0 left-0 w-full h-full -z-10 pointer-events-none transition-opacity duration-500 ${cameraY < -15 ? 'opacity-0' : 'opacity-100'}`}>
+                    {/* Fixed 3D Background - Always visible */}
+                    <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none">
                         <Suspense fallback={<LoadingScreen />}>
                             <Canvas
                                 camera={{
@@ -49,41 +49,57 @@ export default function Summary() {
 
                     {/* Scrollable Content */}
                     <div className="relative z-10">
-                        {/* Hero Sections with 3D Models */}
-                        <ScrollSection targetY={20} setCameraY={setCameraY}>
-                            <div id="hero">
-                                <HeroSection />
+                        {/* Hero Sections with 3D Models - with scroll snap */}
+                        <div className="scroll-smooth" style={{ scrollSnapType: 'y mandatory' }}>
+                            <ScrollSection targetY={20} setCameraY={setCameraY}>
+                                <div id="hero">
+                                    <HeroSection />
+                                </div>
+                            </ScrollSection>
+
+                            <ScrollSection targetY={10} setCameraY={setCameraY}>
+                                <DeveloperSection />
+                            </ScrollSection>
+
+                            <ScrollSection targetY={0} setCameraY={setCameraY}>
+                                <PotionSection />
+                            </ScrollSection>
+
+                            <ScrollSection targetY={-10} setCameraY={setCameraY}>
+                                <AdventureSection />
+                            </ScrollSection>
+                        </div>
+
+                        {/* Content Sections - continue camera movement */}
+                        <ScrollSection targetY={-20} setCameraY={setCameraY}>
+                            <div id="education">
+                                <EducationSection />
                             </div>
                         </ScrollSection>
 
-                        <ScrollSection targetY={8} setCameraY={setCameraY}>
-                            <DeveloperSection />
+                        <ScrollSection targetY={-30} setCameraY={setCameraY}>
+                            <div id="skills">
+                                <SkillsSection />
+                            </div>
                         </ScrollSection>
 
-                        <ScrollSection targetY={0} setCameraY={setCameraY}>
-                            <PotionSection />
+                        <ScrollSection targetY={-40} setCameraY={setCameraY}>
+                            <div id="projects">
+                                <ProjectsSection />
+                            </div>
                         </ScrollSection>
 
-                        <ScrollSection targetY={-10} setCameraY={setCameraY}>
-                            <AdventureSection />
+                        <ScrollSection targetY={-50} setCameraY={setCameraY}>
+                            <div id="experience">
+                                <ExperienceSection />
+                            </div>
                         </ScrollSection>
 
-                        {/* Content Sections */}
-                        <div id="education">
-                            <EducationSection />
-                        </div>
-                        <div id="skills">
-                            <SkillsSection />
-                        </div>
-                        <div id="projects">
-                            <ProjectsSection />
-                        </div>
-                        <div id="experience">
-                            <ExperienceSection />
-                        </div>
-                        <div id="contact">
-                            <ContactSection />
-                        </div>
+                        <ScrollSection targetY={-60} setCameraY={setCameraY}>
+                            <div id="contact">
+                                <ContactSection />
+                            </div>
+                        </ScrollSection>
                     </div>
                 </div>
             </div>
