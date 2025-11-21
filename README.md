@@ -18,7 +18,7 @@ May you enjoy the magic that awaits within. 🔮
 ### How to Navigate:
 
 **Landing Page** (`/`): Choose your viewing experience
-- **Quick View** — Fast, mobile-friendly scrolling portfolio with smooth animations
+- **Quick View** — Fast, scrolling portfolio with smooth animations✨
   <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/ed6b717d-5f7c-4f60-a101-e612fe5ede42" />
 
 - **3D Explore** — Travel through the enchanted hallway by moving left and right. Each room holds its own secrets — click on the elements to reveal the magic within. 🪄
