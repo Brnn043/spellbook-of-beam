@@ -25,7 +25,7 @@ export default function Summary() {
 
     return (
         <CameraContext.Provider value={{ cameraY, setCameraY }}>
-            <div className="min-h-screen bg-transparent">
+            <div className="min-h-screen bg-transparent" style={{ scrollSnapType: 'y mandatory' }}>
                 {/* Floating Navigation */}
                 <FloatingNavbar />
 
@@ -49,26 +49,24 @@ export default function Summary() {
 
                     {/* Scrollable Content */}
                     <div className="relative z-10">
-                        {/* Hero Sections with 3D Models - with scroll snap */}
-                        <div className="scroll-smooth" style={{ scrollSnapType: 'y mandatory' }}>
-                            <ScrollSection targetY={20} setCameraY={setCameraY}>
-                                <div id="hero">
-                                    <HeroSection />
-                                </div>
-                            </ScrollSection>
+                        {/* Hero Sections with 3D Models */}
+                        <ScrollSection targetY={20} setCameraY={setCameraY}>
+                            <div id="hero">
+                                <HeroSection />
+                            </div>
+                        </ScrollSection>
 
-                            <ScrollSection targetY={10} setCameraY={setCameraY}>
-                                <DeveloperSection />
-                            </ScrollSection>
+                        <ScrollSection targetY={10} setCameraY={setCameraY}>
+                            <DeveloperSection />
+                        </ScrollSection>
 
-                            <ScrollSection targetY={0} setCameraY={setCameraY}>
-                                <PotionSection />
-                            </ScrollSection>
+                        <ScrollSection targetY={0} setCameraY={setCameraY}>
+                            <PotionSection />
+                        </ScrollSection>
 
-                            <ScrollSection targetY={-10} setCameraY={setCameraY}>
-                                <AdventureSection />
-                            </ScrollSection>
-                        </div>
+                        <ScrollSection targetY={-10} setCameraY={setCameraY}>
+                            <AdventureSection />
+                        </ScrollSection>
 
                         {/* Content Sections - continue camera movement */}
                         <ScrollSection targetY={-20} setCameraY={setCameraY}>
