@@ -1,5 +1,7 @@
 import { WindowCard } from './WindowCard';
 import { personalInfo } from '@/data/personal';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export function HeroSection() {
     return (
@@ -37,6 +39,21 @@ export function HeroSection() {
 }
 
 export function DeveloperSection() {
+    const beamPhotos = [
+        '/beam-photos/Beam.webp',
+        '/beam-photos/Beam2.webp',
+        '/beam-photos/Beam3.webp'
+    ];
+    const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentPhotoIndex((prev) => (prev + 1) % beamPhotos.length);
+        }, 3000); // เปลี่ยนรูปทุก 3 วินาที
+
+        return () => clearInterval(interval);
+    }, [beamPhotos.length]);
+
     return (
         <section className="min-h-screen flex items-center justify-start px-4 md:px-8">
             <div className="w-full md:w-1/2 flex justify-center md:justify-start">
@@ -50,7 +67,64 @@ export function DeveloperSection() {
                     headerBorderColor="blue-300"
                     titleColor="blue-600"
                 >
-                    <div className="text-6xl mb-4">🧙‍♀️</div>
+                    {/* Photo Gallery with Multiple Polaroid Frames */}
+                    <div className="relative mb-6 flex justify-center items-center gap-4 min-h-[280px]">
+                        {/* Left Small Photo */}
+                        <div className="relative transform -rotate-6 hover:rotate-0 transition-transform duration-300 scale-75 -mt-8">
+                            <div className="bg-white p-2 shadow-[6px_6px_0px_0px_rgba(59,130,246,0.2)] border-4 border-white">
+                                <div className="relative w-32 h-32 overflow-hidden bg-gray-100">
+                                    <Image
+                                        src={beamPhotos[(currentPhotoIndex + 1) % beamPhotos.length]}
+                                        alt="Beam"
+                                        fill
+                                        className="object-cover transition-opacity duration-500"
+                                    />
+                                </div>
+                                <div className="mt-1 text-center">
+                                    <p className="text-[10px] text-blue-500">✨</p>
+                                </div>
+                            </div>
+                            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-12 h-5 bg-pink-100 opacity-70 -rotate-12 border border-pink-200"></div>
+                        </div>
+
+                        {/* Center Main Photo */}
+                        <div className="relative transform rotate-2 hover:rotate-0 transition-transform duration-300 z-10">
+                            <div className="bg-white p-3 shadow-[8px_8px_0px_0px_rgba(59,130,246,0.3)] border-4 border-white">
+                                <div className="relative w-48 h-48 overflow-hidden bg-gray-100">
+                                    <Image
+                                        src={beamPhotos[currentPhotoIndex]}
+                                        alt="Beam"
+                                        fill
+                                        className="object-cover transition-opacity duration-500"
+                                        priority
+                                    />
+                                </div>
+                                <div className="mt-2 text-center">
+                                    <p className="text-xs font-handwriting text-blue-600">✨ Beam ✨</p>
+                                </div>
+                            </div>
+                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-6 bg-yellow-100 opacity-70 rotate-3 border border-yellow-200"></div>
+                        </div>
+
+                        {/* Right Small Photo */}
+                        <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-300 scale-75 mt-8">
+                            <div className="bg-white p-2 shadow-[6px_6px_0px_0px_rgba(59,130,246,0.2)] border-4 border-white">
+                                <div className="relative w-32 h-32 overflow-hidden bg-gray-100">
+                                    <Image
+                                        src={beamPhotos[(currentPhotoIndex + 2) % beamPhotos.length]}
+                                        alt="Beam"
+                                        fill
+                                        className="object-cover transition-opacity duration-500"
+                                    />
+                                </div>
+                                <div className="mt-1 text-center">
+                                    <p className="text-[10px] text-blue-500">✨</p>
+                                </div>
+                            </div>
+                            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-12 h-5 bg-green-100 opacity-70 rotate-6 border border-green-200"></div>
+                        </div>
+                    </div>
+
                     <h2 className="text-4xl md:text-5xl font-black mb-4" style={{
                         color: '#4169E1',
                         textShadow: '3px 3px 0px #87CEEB'
@@ -60,6 +134,20 @@ export function DeveloperSection() {
                     <p className="text-lg text-blue-700 font-medium">
                         Scroll down to explore my journey ⭐
                     </p>
+
+                    {/* Photo indicator dots */}
+                    <div className="flex justify-center gap-2 mt-4">
+                        {beamPhotos.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentPhotoIndex(index)}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentPhotoIndex
+                                    ? 'bg-blue-500 w-6'
+                                    : 'bg-blue-200 hover:bg-blue-300'
+                                    }`}
+                            />
+                        ))}
+                    </div>
                 </WindowCard>
             </div>
         </section>
