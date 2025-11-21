@@ -7,6 +7,7 @@ export function FloatingNavbar() {
 
     const sections = [
         { id: 'hero', label: '🏠', name: 'Home' },
+        { id: 'developer', label: '👤', name: 'About' },
         { id: 'education', label: '🎓', name: 'Education' },
         { id: 'skills', label: '🔮', name: 'Skills' },
         { id: 'projects', label: '🎨', name: 'Projects' },

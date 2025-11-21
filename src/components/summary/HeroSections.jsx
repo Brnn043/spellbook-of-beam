@@ -49,7 +49,7 @@ export function DeveloperSection() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentPhotoIndex((prev) => (prev + 1) % beamPhotos.length);
-        }, 3000); // เปลี่ยนรูปทุก 3 วินาที
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [beamPhotos.length]);
@@ -179,9 +179,6 @@ export function PotionSection() {
                     }}>
                         Personality & Values
                     </h1>
-                    <p className="text-xl md:text-2xl text-orange-700 font-semibold mb-6">
-                        私の性格と価値観 ✨
-                    </p>
                     <div className="text-base text-gray-700 bg-white/80 rounded-2xl p-6 border-4 border-orange-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] space-y-3">
                         {personalityData?.description.map((desc, index) => (
                             <p key={index}>{desc}</p>
@@ -218,9 +215,6 @@ export function AdventureSection() {
                     }}>
                         Lifestyle & Hobbies
                     </h1>
-                    <p className="text-xl md:text-2xl text-green-700 font-semibold mb-6">
-                        私の趣味とライフスタイル ✨
-                    </p>
                     <div className="text-base text-gray-700 bg-white/80 rounded-2xl p-6 border-4 border-green-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] space-y-3">
                         {lifestyleData?.description.map((desc, index) => (
                             <p key={index}>{desc}</p>

@@ -57,15 +57,21 @@ export default function Summary() {
                         </ScrollSection>
 
                         <ScrollSection targetY={10} setCameraY={setCameraY}>
-                            <DeveloperSection />
+                            <div id="developer">
+                                <DeveloperSection />
+                            </div>
                         </ScrollSection>
 
                         <ScrollSection targetY={0} setCameraY={setCameraY}>
-                            <PotionSection />
+                            <div id="personality">
+                                <PotionSection />
+                            </div>
                         </ScrollSection>
 
                         <ScrollSection targetY={-10} setCameraY={setCameraY}>
-                            <AdventureSection />
+                            <div id="lifestyle">
+                                <AdventureSection />
+                            </div>
                         </ScrollSection>
 
                         {/* Content Sections - continue camera movement */}
