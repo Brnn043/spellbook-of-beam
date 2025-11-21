@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export function FloatingNavbar() {
     const [activeSection, setActiveSection] = useState('hero');
@@ -43,40 +44,61 @@ export function FloatingNavbar() {
     return (
         <>
             {/* Desktop Sidebar */}
-            <nav className="hidden md:block fixed left-0 top-0 h-screen w-20 bg-gradient-to-b from-pink-100 via-purple-100 to-cyan-100 border-r-4 border-white shadow-[4px_0_0_0_rgba(236,72,153,0.3)] z-50">
+            <nav className="hidden md:block fixed left-0 top-0 h-screen w-32 bg-gradient-to-b from-pink-100 via-purple-100 to-cyan-100 border-r-4 border-white shadow-[4px_0_0_0_rgba(236,72,153,0.3)] z-50">
                 <div className="flex flex-col items-center h-full py-8">
                     {/* Logo/Brand */}
-                    <div className="mb-8 pb-6 border-b-2 border-pink-300 w-16">
-                        <div className="text-3xl text-center animate-bounce">✨</div>
-                        <div className="text-xs font-bold text-purple-600 text-center mt-2">BEAM</div>
+                    <div className="mb-8 pb-6 border-b-2 border-pink-300 w-28">
+                        <div className="relative w-16 h-16 mx-auto mb-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-pink-300 to-purple-300 rounded-full animate-pulse"></div>
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <Image
+                                    src="/mascot.webp"
+                                    alt="Beam's Mascot"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="text-xs font-bold text-purple-600 text-center">BEAM</div>
                     </div>
 
                     {/* Navigation Items */}
-                    <div className="flex flex-col items-center gap-3 flex-1">
+                    <div className="flex flex-col flex-1 w-full relative">
+                        {/* Floating decorative stickers */}
+                        <div className="absolute -left-3 top-16 text-xl animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}>⭐</div>
+                        <div className="absolute -right-3 top-40 text-lg animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '2.5s' }}>💫</div>
+                        <div className="absolute -left-2 bottom-32 text-xl animate-bounce" style={{ animationDelay: '1s', animationDuration: '3.5s' }}>🌟</div>
+                        <div className="absolute -right-2 bottom-16 text-lg animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '2.8s' }}>✨</div>
+
                         {sections.map(({ id, label, name }) => (
                             <button
                                 key={id}
                                 onClick={() => scrollToSection(id)}
-                                className={`relative group w-14 h-14 rounded-2xl transition-all duration-300 flex items-center justify-center ${activeSection === id
-                                    ? 'bg-gradient-to-br from-pink-400 to-purple-400 text-white scale-110 shadow-[4px_4px_0px_0px_rgba(236,72,153,0.5)]'
-                                    : 'bg-white/60 hover:bg-white text-gray-700 hover:scale-105 border-2 border-pink-200'
+                                className={`relative flex-1 w-full transition-all duration-500 flex flex-col items-center justify-center gap-1 group border-l-4 ${activeSection === id
+                                    ? 'bg-gradient-to-r from-pink-300/80 via-purple-300/80 to-transparent border-pink-500 shadow-[inset_4px_0_8px_rgba(236,72,153,0.3)]'
+                                    : 'bg-transparent border-transparent hover:bg-white/30 hover:border-pink-200'
                                     }`}
                                 title={name}
                             >
-                                <span className="text-2xl">{label}</span>
-
-                                {/* Tooltip */}
-                                <span className="absolute left-full ml-4 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg border-2 border-white">
+                                <span className={`text-2xl relative z-10 transition-all duration-300 ${activeSection === id ? 'scale-125 drop-shadow-lg' : 'scale-100'
+                                    }`}>
+                                    {label}
+                                </span>
+                                <span className={`text-xs font-bold whitespace-nowrap relative z-10 transition-all duration-300 ${activeSection === id
+                                    ? 'text-pink-600 scale-110 font-black'
+                                    : 'text-gray-600 group-hover:text-pink-500'
+                                    }`}>
                                     {name}
-                                    <span className="absolute right-full top-1/2 -translate-y-1/2 border-8 border-transparent border-r-pink-500"></span>
                                 </span>
                             </button>
                         ))}
                     </div>
 
                     {/* Bottom Decoration */}
-                    <div className="mt-auto pt-6 border-t-2 border-pink-300 w-16">
+                    <div className="mt-auto pt-6 border-t-2 border-pink-300 w-28 relative">
                         <div className="text-2xl text-center animate-pulse">🎀</div>
+                        <div className="absolute -top-3 -right-2 text-lg animate-bounce">💝</div>
+                        <div className="absolute -top-2 -left-2 text-sm animate-bounce" style={{ animationDelay: '0.5s' }}>🌸</div>
                     </div>
                 </div>
             </nav>
