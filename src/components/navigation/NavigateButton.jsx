@@ -26,7 +26,7 @@ export const NavigateButton = () => {
                 {isOpen && (
                     <div className="shadow-lg rounded-lg flex flex-col space-y-2 justify-center items-center">
                         <a
-                            href="/Profile"
+                            href="/profile"
                             onClick={() => setIsOpen(false)}
                             className={`w-24 py-2 border-2 border-thisBlack text-thisBlack bg-gradientcustom2 text-center rounded-full relative overflow-hidden transition-all`}
                             style={{
@@ -38,7 +38,7 @@ export const NavigateButton = () => {
                         </a>
 
                         <a
-                            href="/Project"
+                            href="/project"
                             onClick={() => setIsOpen(false)}
                             className={`w-24 py-2 border-2 border-thisBlack text-thisBlack bg-gradientcustom2 text-center rounded-full relative overflow-hidden transition-all`}
                             style={{
@@ -49,7 +49,7 @@ export const NavigateButton = () => {
                             Project
                         </a>
                         <a
-                            href="/Activity"
+                            href="/activity"
                             onClick={() => setIsOpen(false)}
                             className={`w-24 py-2 border-2 border-thisBlack text-thisBlack bg-gradientcustom2 text-center rounded-full relative overflow-hidden transition-all`}
                             style={{
@@ -107,7 +107,7 @@ export const BackButton = () => {
     return (
         <div className="fixed top-10 md:top-7 z-10 left-7">
             <a
-                href="/"
+                href="/hallway"
                 className="text-thisBlack font-karla text-lg md:text-base border-2 px-4 py-2 rounded-2xl relative overflow-hidden transition-all duration-200 bg-gradientcustom2 border-thisBlack hover:bg-gradientcustom hover:border-white"
             >
                 Back to hallway

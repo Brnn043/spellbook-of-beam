@@ -2,7 +2,7 @@
 export const personalInfo = [
     {
         title: '👋 Introduction',
-        images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
+        images: ['/beam-photos/Beam.webp', '/beam-photos/Beam2.webp', '/beam-photos/Beam3.webp'],
         description: [
             'Hello! I\'m Raksakul Hiranas, but everyone calls me Beam! 🌟',
             'Born on July 2nd, 2005 🎂 Currently pursuing my passion in Computer Engineering at Chulalongkorn University as a 3rd-year student.',
@@ -29,7 +29,7 @@ export const personalInfo = [
     },
     {
         title: '🚀 Personality & Values',
-        images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
+        images: ['/beam-photos/Beam.webp', '/beam-photos/Beam2.webp', '/beam-photos/Beam3.webp'],
         description: [
             'I\'m an enthusiastic and hardworking individual with an unquenchable thirst for creativity! 🎨',
             'Learning new things excites me, and I embrace challenges as opportunities to grow and excel. 📈',
@@ -41,7 +41,7 @@ export const personalInfo = [
     },
     {
         title: '🎯 Lifestyle & Hobbies',
-        images: ['/Beam.webp', '/Beam2.webp', '/Beam3.webp'],
+        images: ['/beam-photos/Beam.webp', '/beam-photos/Beam2.webp', '/beam-photos/Beam3.webp'],
         description: [
             'When challenges arise, my determination and commitment help me push through to achieve my goals! 💪',
             'In my free time, I dive into various creative pursuits that keep me inspired and energized:',
