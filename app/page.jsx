@@ -35,7 +35,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Content Section */}
-            <div className="px-6 pb-6 xl:px-4 xl:pb-4">
+            <div className="px-6 pb-6 xl:px-4 xl:pb-4 mx-2">
               {/* Hero Section with Mascot */}
               <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl border-4 border-pink-300 p-6 mb-6 shadow-lg xl:p-4 xl:mb-4">
                 <div className="flex flex-col md:flex-row items-center gap-6">
@@ -62,11 +62,14 @@ export default function HomePage() {
                       Raksakul Hiranas (Beam)
                     </h2>
                     <p className="text-purple-700 font-semibold mb-3 xl:text-base">
-                      Have a look around! DM @user for any questions.
+                      Explore my enchanted portfolio, feel free to look around!
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start xl:gap-2">
-                      <div className="bg-white rounded-full px-4 py-2 border-2 border-pink-200 shadow xl:px-3 xl:py-1">
+                      {/* <div className="bg-white rounded-full px-4 py-2 border-2 border-pink-200 shadow xl:px-3 xl:py-1">
                         <span className="text-sm font-bold text-pink-600 xl:text-xs">status: UNDER CONSTRUCTION 🔧</span>
+                      </div> */}
+                      <div className="bg-pink-600 rounded-full px-4 py-2 border-2 border-pink-200 shadow xl:px-3 xl:py-1">
+                        <span className="text-sm font-bold text-white xl:text-xs">status: UNDER CONSTRUCTION 🔧</span>
                       </div>
                       <div className="bg-gradient-to-r from-pink-200 to-purple-200 rounded-full px-4 py-2 border-2 border-purple-300 shadow xl:px-3 xl:py-1">
                         <span className="text-sm font-bold text-purple-700 xl:text-xs">last updated: January 2025</span>
@@ -80,7 +83,7 @@ export default function HomePage() {
               <div className="relative mb-6 rounded-2xl overflow-hidden border-4 border-pink-300 shadow-lg" style={{
                 backgroundImage: `
                   repeating-conic-gradient(
-                    #FFE4E1 0% 25%,
+                    #bf4c4cff 0% 25%,
                     #E6E6FA 0% 50%
                   )`,
                 backgroundSize: '40px 40px',
