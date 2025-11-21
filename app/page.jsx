@@ -67,28 +67,36 @@ export default function HomePage() {
                 </div>
 
                 {/* Window Content */}
-                <div className="p-8 flex flex-col items-center text-center">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="inline-block bg-gradient-to-r from-pink-400 to-purple-400 text-white px-3 py-1 rounded-full text-xs font-bold mb-4">
                     ⭐ RECOMMENDED
                   </div>
 
-                  <div className="text-7xl mb-4 group-hover:animate-bounce">📱</div>
+                  {/* Preview Screenshot */}
+                  <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden border-4 border-pink-200 shadow-lg">
+                    <Image
+                      src="/preview-mode/summary.webp"
+                      alt="Quick View Preview"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
-                  <h2 className="text-4xl font-black mb-3" style={{
+                  <h2 className="text-3xl font-black mb-2" style={{
                     color: '#FF1493',
                     textShadow: '3px 3px 0px #FFB6C1'
                   }}>
                     Quick View
                   </h2>
 
-                  <p className="text-lg text-purple-700 font-semibold mb-6">
+                  <p className="text-base text-purple-700 font-semibold mb-4">
                     Simple scrolling portfolio
                   </p>
 
                   <div className="bg-gradient-to-r from-pink-200 to-purple-200 rounded-full py-2 px-6 text-center border-3 border-pink-300">
-                      <span className="text-pink-600 font-bold group-hover:text-purple-600 transition-colors">
-                        Let&apos;s Go! →
-                      </span>
+                    <span className="text-pink-600 font-bold group-hover:text-purple-600 transition-colors">
+                      Let&apos;s Go! →
+                    </span>
                   </div>
                 </div>
               </div>
@@ -123,21 +131,28 @@ export default function HomePage() {
                 </div>
 
                 {/* RPG Content */}
-                <div className="p-8 flex flex-col items-center text-center">
+                <div className="p-6 flex flex-col items-center text-center">
                   <div className="inline-block bg-gradient-to-r from-purple-400 to-blue-400 text-white px-3 py-1 rounded-full text-xs font-bold mb-4">
                     🎮 INTERACTIVE MODE
                   </div>
 
-                  <div className="text-7xl mb-4 group-hover:animate-bounce">🗺️</div>
+                  <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden border-4 border-purple-200 shadow-lg">
+                    <Image
+                      src="/preview-mode/hallway.webp"
+                      alt="3D Explore Preview"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
-                  <h2 className="text-4xl font-black mb-3" style={{
+                  <h2 className="text-3xl font-black mb-2" style={{
                     color: '#9333EA',
                     textShadow: '3px 3px 0px #C084FC'
                   }}>
                     3D Explore
                   </h2>
 
-                  <p className="text-lg text-purple-700 font-semibold mb-6">
+                  <p className="text-base text-purple-700 font-semibold mb-4">
                     Interactive 3D experience
                   </p>
 
