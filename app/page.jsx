@@ -37,6 +37,9 @@ export default function HomePage() {
           <p className="text-2xl md:text-3xl text-purple-700 font-bold">
             Choose your way to explore my portfolio 👀
           </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Last updated: January 2025
+          </p>
         </div>
 
         {/* Options Container */}
