@@ -2,9 +2,12 @@
 
 Welcome to my **Spellbook**, where every spell tells a story.  
 This is my **portfolio**, a place to explore my journey through two unique experiences:
-
 - **Quick View** (/summary) — A modern, kawaii-styled scrolling portfolio
 - **3D Explore** (/hallway) — An interactive 3D world to explore room by room
+
+<img width="1896" height="869" alt="image" src="https://github.com/user-attachments/assets/f59fcdaf-30ee-4218-aeab-5e5104b1abc8" />
+
+
 
 May you enjoy the magic that awaits within. 🔮
 
@@ -19,7 +22,8 @@ May you enjoy the magic that awaits within. 🔮
 
 **Landing Page** (`/`): Choose your viewing experience
 - **Quick View** — Fast, scrolling portfolio with smooth animations✨
-  <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/ed6b717d-5f7c-4f60-a101-e612fe5ede42" />
+  <img width="1898" height="866" alt="image" src="https://github.com/user-attachments/assets/af0dbb42-db25-4c02-a6cd-57769917f39d" />
+
 
 - **3D Explore** — Travel through the enchanted hallway by moving left and right. Each room holds its own secrets — click on the elements to reveal the magic within. 🪄
   <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/d2eb2330-8dae-4935-8c95-b9a2ecbe3159" />
