@@ -51,9 +51,9 @@ export default function Page() {
         </div>
 
         <MoveButton setControls={setControls} />
-        {activeModal === "profile" && <Visit name="Profile" setOpen={closeModal} />}
-        {activeModal === "project" && <Visit name="Project" setOpen={closeModal} />}
-        {activeModal === "activity" && <Visit name="Activity" setOpen={closeModal} />}
+        {activeModal === "profile" && <Visit name="profile" setOpen={closeModal} />}
+        {activeModal === "project" && <Visit name="project" setOpen={closeModal} />}
+        {activeModal === "activity" && <Visit name="activity" setOpen={closeModal} />}
 
         {showWelcome && <WelcomeModal setShowWelcome={setShowWelcome} />}
         {!showWelcome && <HintMessage sentences={hallwaySentences} />}
