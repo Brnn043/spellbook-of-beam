@@ -1,4 +1,5 @@
 import { Layout } from '@/components/dom/Layout'
+import { Analytics } from "@vercel/analytics/next"
 import '@/global.css'
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className='select-none'>
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   )
